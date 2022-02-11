@@ -102,6 +102,7 @@
 				</dependencies>
 			</plugin>
 		</plugins>
+		<finalName>kotlin-crud-shop</finalName>
 	</build>
 
 </project>
