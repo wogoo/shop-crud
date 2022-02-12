@@ -5,7 +5,18 @@
 Studying a basic crud from a store, with Kotlin, Spring and deploying to some cloud, for now.
 </p>
 
-### Starting the project with docker
+### Features:
+
+<p id="desc" >
+This package provides tools for the following, and more:
+</p>
+<ul>
+  <li>In progress ...</li>
+  <li>In progress ...</li>
+  <li>In progress ...</li>
+</ul>
+
+### Getting started -> Docker
 steps to test and reproduce the project.
 ```sh
 mvn clean package
