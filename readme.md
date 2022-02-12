@@ -1,6 +1,8 @@
 ## Kotlin-Crud-Shop
-<p id="about" align="center">
-Studying a basic crud, with kotlin and spring.
+
+### Description:
+<p id="desc" align="center">
+Studying a basic crud from a store, with Kotlin, Spring and deploying to some cloud, for now.
 </p>
 
 ###Run with Docker
