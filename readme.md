@@ -1,11 +1,11 @@
 ## Kotlin-Crud-Shop
 
 ### Description:
-<p id="desc" align="center">
+<p id="desc" >
 Studying a basic crud from a store, with Kotlin, Spring and deploying to some cloud, for now.
 </p>
 
-###Run with Docker
+### Starting the project with docker
 steps to test and reproduce the project.
 ```sh
 mvn clean package
