@@ -3,7 +3,7 @@ package com.wogoo.shop.shop.controller
 import com.wogoo.shop.shop.controller.request.PostCustomerRequest
 import com.wogoo.shop.shop.controller.request.PutCustomerRequest
 import com.wogoo.shop.shop.controller.request.response.CustomerResponse
-import com.wogoo.shop.shop.extension.toPersonModel
+import com.wogoo.shop.shop.extension.toCustomerModel
 import com.wogoo.shop.shop.extension.toResponse
 import com.wogoo.shop.shop.repository.CustomerRepository
 import com.wogoo.shop.shop.service.CustomerService
@@ -30,13 +30,13 @@ class CustomerController(private val customerService: CustomerService, private v
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     fun create(@RequestBody customer: PostCustomerRequest) {
-        customerRepository.save(customer.toPersonModel())
+        customerRepository.save(customer.toCustomerModel())
     }
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     fun update(@PathVariable id: Int, @RequestBody customer: PutCustomerRequest) {
         val customerSaved = customerService.findById(id)
-        return customerService.update(customer.toPersonModel(customerSaved))
+        return customerService.update(customer.toCustomerModel(customerSaved))
     }
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)

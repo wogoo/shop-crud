@@ -1,12 +1,10 @@
 package com.wogoo.shop.shop.controller
 
 import com.wogoo.shop.shop.controller.request.PostProductRequest
-import com.wogoo.shop.shop.controller.request.PutCustomerRequest
 import com.wogoo.shop.shop.controller.request.PutProductRequest
 import com.wogoo.shop.shop.controller.response.PageResponse
 import com.wogoo.shop.shop.controller.response.ProductResponse
 import com.wogoo.shop.shop.extension.toPageResponse
-import com.wogoo.shop.shop.extension.toPersonModel
 import com.wogoo.shop.shop.extension.toProductModel
 import com.wogoo.shop.shop.extension.toResponse
 import com.wogoo.shop.shop.service.CustomerService

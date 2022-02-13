@@ -18,11 +18,11 @@ fun CustomerModel.toResponse(): CustomerResponse {
         email = this.email
     )
 }
-fun PostCustomerRequest.toPersonModel(): CustomerModel {
+fun PostCustomerRequest.toCustomerModel(): CustomerModel {
     return CustomerModel(name = this.name, email = this.email, zip = this.zip)
 }
 
-fun PutCustomerRequest.toPersonModel(previousCustomer: CustomerModel): CustomerModel{
+fun PutCustomerRequest.toCustomerModel(previousCustomer: CustomerModel): CustomerModel{
     return CustomerModel(id = previousCustomer.id, name = this.name,  zip = this.zip, email = previousCustomer.email)
 }
 
