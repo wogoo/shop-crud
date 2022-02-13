@@ -1,9 +1,12 @@
 package com.wogoo.shop.shop.controller
 
 import com.wogoo.shop.shop.controller.request.PostProductRequest
+import com.wogoo.shop.shop.controller.request.PutCustomerRequest
+import com.wogoo.shop.shop.controller.request.PutProductRequest
 import com.wogoo.shop.shop.controller.response.PageResponse
 import com.wogoo.shop.shop.controller.response.ProductResponse
 import com.wogoo.shop.shop.extension.toPageResponse
+import com.wogoo.shop.shop.extension.toPersonModel
 import com.wogoo.shop.shop.extension.toProductModel
 import com.wogoo.shop.shop.extension.toResponse
 import com.wogoo.shop.shop.service.CustomerService
@@ -26,6 +29,12 @@ class ProductController(
     fun create(@RequestBody @Valid request: PostProductRequest) {
         val customer = customerService.findById(request.customerId)
         productService.create(request.toProductModel(customer))
+    }
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    fun update(@PathVariable id: Int, @RequestBody product: PutProductRequest) {
+        val productSaved = productService.findById(id)
+        return productService.update(product.toProductModel(productSaved))
     }
     @GetMapping("/{id}")
     fun findById(@PathVariable id: Int): ProductResponse {

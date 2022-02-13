@@ -22,6 +22,9 @@ data class ProductModel (
     @Column(name = "product_desc")
     var productDesc: String,
 
+    @Column(name = "product_link")
+    var productLink: String,
+
     @Column(name = "created_at")
     val createdAt: LocalDateTime = LocalDateTime.now(),
 

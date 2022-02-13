@@ -27,4 +27,8 @@ class ProductService(private val productRepository: ProductRepository) {
         productRepository.delete(product)
     }
 
+    fun update(product: ProductModel) {
+        productRepository.save(product)
+    }
+
 }
