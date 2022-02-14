@@ -1,5 +1,7 @@
 package com.wogoo.shop.shop.service
 
+import com.wogoo.shop.shop.enums.Errors
+import com.wogoo.shop.shop.exception.NotFoundException
 import com.wogoo.shop.shop.model.ProductModel
 import com.wogoo.shop.shop.repository.ProductRepository
 import org.springframework.data.domain.Page
@@ -15,7 +17,8 @@ class ProductService(private val productRepository: ProductRepository) {
     }
 
     fun findById(id: Int): ProductModel {
-        return productRepository.findById(id).orElseThrow()
+        return productRepository.findById(id)
+            .orElseThrow{NotFoundException(Errors.SP2001.message.format(id),Errors.SP2001.message)}
     }
 
     fun findAll(pageable: Pageable): Page<ProductModel> {
