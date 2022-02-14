@@ -31,6 +31,9 @@ class ProductService(private val productRepository: ProductRepository) {
     }
 
     fun update(product: ProductModel) {
+        if(!productRepository.existsById(product.id!!)){
+            throw NotFoundException(Errors.SP2001.message.format(product.id), Errors.SP2001.code)
+        }
         productRepository.save(product)
     }
 
