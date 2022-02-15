@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*
 import javax.validation.Valid
 
 @RestController
-@RequestMapping("products")
+@RequestMapping("api/v1/products")
 class ProductController(
     private val productService: ProductService,
     private val customerService: CustomerService

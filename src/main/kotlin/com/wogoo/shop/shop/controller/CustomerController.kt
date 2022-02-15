@@ -11,7 +11,7 @@ import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 
 @RestController
-@RequestMapping("customers")
+@RequestMapping("api/v1/customers")
 @CrossOrigin("*")
 class CustomerController(private val customerService: CustomerService, private val customerRepository: CustomerRepository) {
 
