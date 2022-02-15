@@ -24,4 +24,7 @@ class CustomerService(private val customerRepository: CustomerRepository) {
         val customer = findById(id)
         customerRepository.delete(customer)
     }
+    fun emailAvailable(email: String): Boolean {
+        return !customerRepository.existsByEmail(email)
+    }
 }
