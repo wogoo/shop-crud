@@ -2,7 +2,7 @@ package com.wogoo.shop.shop.controller
 
 import com.wogoo.shop.shop.controller.request.PostCustomerRequest
 import com.wogoo.shop.shop.controller.request.PutCustomerRequest
-import com.wogoo.shop.shop.controller.request.response.CustomerResponse
+import com.wogoo.shop.shop.controller.response.CustomerResponse
 import com.wogoo.shop.shop.extension.toCustomerModel
 import com.wogoo.shop.shop.extension.toResponse
 import com.wogoo.shop.shop.repository.CustomerRepository
